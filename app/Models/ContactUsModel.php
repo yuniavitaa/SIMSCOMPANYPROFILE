@@ -10,7 +10,7 @@ class ContactUsModel extends Model
     protected $primaryKey = 'id';
 
     protected $allowedFields = ['keperluan', 'pesan']; // Kolom yang dapat diisi
-    protected $useTimestamps = true;                  // Aktifkan timestamps
+    protected $useTimestamps = false;                  // Aktifkan timestamps
     protected $createdField  = 'created_at';          // Kolom untuk created_at
     protected $updatedField  = 'updated_at';          // Kolom untuk updated_at
 }

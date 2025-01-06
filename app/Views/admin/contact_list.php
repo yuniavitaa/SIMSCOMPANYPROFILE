@@ -1,4 +1,4 @@
-<?= $this->extend('layout/admin_template') ?> <!-- Extend template master -->
+<?= $this->extend('templates/admin_dashboard') ?> <!-- Extend template master -->
 
 <?= $this->section('content') ?> <!-- Mulai bagian content -->
 <div class="card">

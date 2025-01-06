@@ -300,6 +300,7 @@
 
 <?= $this->section('content') ?>
 
+
 <!-- Hero Section -->
 <header class="hero-section">
     <div class="hero-overlay"></div>

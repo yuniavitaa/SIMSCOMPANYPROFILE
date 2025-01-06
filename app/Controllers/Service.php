@@ -12,6 +12,9 @@ class Service extends BaseController
         return view('frontend_services', $data);
     }
 
+    
+
+
     public function pay_tv_services(): string
     {
         $data = [

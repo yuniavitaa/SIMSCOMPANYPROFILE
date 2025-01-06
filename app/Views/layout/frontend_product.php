@@ -18,7 +18,8 @@
                     </ul>
                 </div>
                 <div class="card-footer text-center">
-                    <button class="btn btn-primary mt-auto w-100" onclick="continueToPurchase()">Beli Paket</button>
+                    <button class="btn btn-primary mt-auto w-100" onclick="setPackage('Paket Dasar', 1500000)">Beli Paket</button>
+
                 </div>
             </div>
         </div>
@@ -39,7 +40,7 @@
                     </ul>
                 </div>
                 <div class="card-footer text-center">
-                    <button class="btn btn-primary mt-auto w-100" onclick="continueToPurchase()">Beli Paket</button>
+                    <button class="btn btn-primary mt-auto w-100" onclick="setPackage('Paket Menengah', 2500000)">Beli Paket</button>
                 </div>
             </div>
         </div>
@@ -60,9 +61,23 @@
                     </ul>
                 </div>
                 <div class="card-footer text-center">
-                    <button class="btn btn-primary mt-auto w-100" onclick="continueToPurchase()">Beli Paket</button>
+                    <button class="btn btn-primary mt-auto w-100" onclick="setPackage('Paket Premium', 4000000)">Beli Paket</button>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
+<script>
+    function setPackage(packageName, packagePrice) {
+        $.post('/pendaftaran/setPackage', {
+            package_name: packageName,
+            package_price: packagePrice
+        }, function(response) {
+            console.log(response); // Tambahkan ini untuk melihat respons
+            window.location.href = '/pendaftaran';
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.error("Request failed: " + textStatus + ", " + errorThrown);
+        });
+    }
+</script>

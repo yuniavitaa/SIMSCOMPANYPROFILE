@@ -1,0 +1,101 @@
+INFO - 2024-12-24 05:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-24 05:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-24 05:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-24 06:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-24 06:08:07 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\pendaftaran_anggota.php on line 58.
+ 1 APPPATH\Views\pendaftaran_anggota.php(58): number_format(null, 0, ',', '.')
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\pendaftaran_anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pendaftaran_anggota', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(33): view('pendaftaran_anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-24 06:08:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-24 06:08:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-24 06:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-24 06:11:43 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\pendaftaran_anggota.php on line 58.
+ 1 APPPATH\Views\pendaftaran_anggota.php(58): number_format(null, 0, ',', '.')
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\pendaftaran_anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pendaftaran_anggota', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(33): view('pendaftaran_anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-24 06:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-24 06:11:50 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\pendaftaran_anggota.php on line 58.
+ 1 APPPATH\Views\pendaftaran_anggota.php(58): number_format(null, 0, ',', '.')
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\pendaftaran_anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pendaftaran_anggota', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(33): view('pendaftaran_anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+CRITICAL - 2024-12-24 06:12:23 --> Invalid file: "pendaftaran/daftar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pendaftaran/daftar.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pendaftaran/daftar', [], true)
+ 3 APPPATH\Controllers\PendaftaranAnggota.php(223): view('pendaftaran/daftar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->daftar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+CRITICAL - 2024-12-24 06:14:47 --> Invalid file: "admin/pendaftaran_list.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pendaftaran_list.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/pendaftaran_list', [], true)
+ 3 APPPATH\Controllers\PendaftaranAnggota.php(223): view('admin/pendaftaran_list', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->daftar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+CRITICAL - 2024-12-24 06:15:17 --> Invalid file: "pendaftaran/detail.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pendaftaran/detail.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pendaftaran/detail', [], true)
+ 3 APPPATH\Controllers\PendaftaranAnggota.php(241): view('pendaftaran/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->detail('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+CRITICAL - 2024-12-24 06:18:54 --> Invalid file: "pendaftaran/detail.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pendaftaran/detail.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pendaftaran/detail', [], true)
+ 3 APPPATH\Controllers\PendaftaranAnggota.php(241): view('pendaftaran/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->detail('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-24 07:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-24 07:46:41 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\pendaftaran_anggota.php on line 58.
+ 1 APPPATH\Views\pendaftaran_anggota.php(58): number_format(null, 0, ',', '.')
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\pendaftaran_anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pendaftaran_anggota', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(33): view('pendaftaran_anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+CRITICAL - 2024-12-24 08:30:18 --> Call to undefined method App\Models\BuktiPembayaranModel::getAllPayments
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\PendaftaranAnggota.php(266): CodeIgniter\Model->__call('getAllPayments', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->buktiPembayaran()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')

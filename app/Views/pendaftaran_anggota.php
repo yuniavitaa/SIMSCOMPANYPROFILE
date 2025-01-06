@@ -2,18 +2,23 @@
 
 <?= $this->section('style') ?>
 <style>
+    .form-container {
+        margin-top: 5rem;
+    }
+
+    .form-label {
+        font-weight: bold;
+    }
 </style>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
-<?php
-helper('form');
-?>
-<div class="container pt-sm-5 mt-5">
+<?php helper('form'); ?>
+<div class="container form-container">
     <div class="row">
-        <p class="display-3 mb-5" data-aos="fade-up">
-            Form Pendaftaran
-        </p>
+        <p class="display-3 mb-5" data-aos="fade-up">Form Pendaftaran</p>
+
+        <!-- Flash Messages -->
         <?php if (session()->getFlashdata('sukses')) : ?>
             <div class="alert alert-success" role="alert" data-aos="fade-down">
                 <?= session()->getFlashdata('sukses') ?>
@@ -23,152 +28,127 @@ helper('form');
                 <?= session()->getFlashdata('gagal') ?>
             </div>
         <?php endif; ?>
-        <small class="text-secondary">* Wajib diisi</small>
-        <form action="/pendaftaran/kirim" method="post">
-            <?= csrf_field() ?>
 
+        <?php if (session()->getFlashdata('success')): ?>
+            <div class="alert alert-success">
+                <?= session()->getFlashdata('success'); ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if (session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger">
+                <?= session()->getFlashdata('error'); ?>
+            </div>
+        <?php endif; ?>
+
+
+        <!-- Informasi Wajib Diisi -->
+        <small class="text-secondary">* Wajib diisi</small>
+
+        <!-- Form Pendaftaran -->
+        <form action="/pendaftaran/kirim" method="post" enctype="multipart/form-data">
+            <?= csrf_field() ?>
+            <div class="mb-3">
+                <label for="display_package_name" class="form-label">Nama Paket</label>
+                <input id="display_package_name" class="form-control" type="text" name="package_name" value="<?= session()->get('package_name') ?>" readonly />
+            </div>
+
+            <div class="mb-3">
+                <label for="display_package_price" class="form-label">Harga Paket</label>
+                <input id="display_package_price" class="form-control" type="text" name="package_price" value="Rp <?= number_format(session()->get('package_price'), 0, ',', '.') ?>" readonly />
+            </div>
             <!-- Nama Lengkap -->
-            <div class="form-floating mb-2">
-                <input id="fullname" class="form-control <?= (validation_show_error('fullname')) ? 'is-invalid' : ''; ?>"
-                    type="text" name="fullname" value="<?= old('fullname', session()->get('fullname') ?? '') ?>"
-                    placeholder="Nama Lengkap *" required />
+            <div class="mb-3">
+                <label for="fullname" class="form-label">Nama Lengkap *</label>
+                <input id="fullname" class="form-control <?= (validation_show_error('fullname')) ? 'is-invalid' : ''; ?>" type="text" name="fullname" value="<?= old('fullname', session()->get('fullname') ?? '') ?>" required readonly />
                 <div class="invalid-feedback">
                     <?= validation_show_error('fullname'); ?>
                 </div>
-                <label for="fullname">Nama Lengkap *</label>
             </div>
 
-
             <!-- Email -->
-            <div class="form-floating mb-2">
-                <input id="email" class="form-control <?= (validation_show_error('email')) ? 'is-invalid' : ''; ?>"
-                    type="email" name="email"
-                    value="<?= old('email', $email ?? '') ?>"
-                    placeholder="Alamat Email *" required autocomplete="email" />
+            <div class="mb-3">
+                <label for="email" class="form-label">Alamat Email *</label>
+                <input id="email" class="form-control <?= (validation_show_error('email')) ? 'is-invalid' : ''; ?>" type="email" name="email" value="<?= old('email', $email ?? '') ?>" required autocomplete="email" readonly />
                 <div class="invalid-feedback">
                     <?= validation_show_error('email'); ?>
                 </div>
-                <label for="email">Alamat Email *</label>
             </div>
 
+
             <!-- Nomor HP -->
-            <div class="form-floating mb-2">
-                <input id="nomorHp" class="form-control <?= (validation_show_error('nomorHp')) ? 'is-invalid' : ''; ?>"
-                    type="text" name="nomorHp"
-                    value="<?= old('nomorHp', $nomorHp ?? '') ?>"
-                    placeholder="Nomor HP *" required />
-                <div class="invalid-feedback">
-                    <?= validation_show_error('nomorHp'); ?>
-                </div>
-                <label for="nomorHp">Nomor HP *</label>
+            <div class="mb-3">
+                <label for="nomorHp" class="form-label">Nomor HP *</label>
+                <input type="text" class="form-control" id="nomorHp" name="nomorHp" value="<?= old('nomorHp') ?>" required />
             </div>
 
             <!-- Domisili -->
-            <div class="form-floating mb-2">
-                <textarea class="form-control overlayscollbar <?= (validation_show_error('domisili')) ? 'is-invalid' : ''; ?>"
-                    rows="5" type="text" name="domisili" id="domisili"
-                    placeholder="Alamat domisili"><?= old('domisili', $domisili ?? '') ?></textarea>
-                <label for="domisili">Alamat domisili</label>
-                <div class="invalid-feedback mb-2">
-                    <?= validation_show_error('domisili'); ?>
-                </div>
+            <div class="mb-3">
+                <label for="domisili" class="form-label">Domisili *</label>
+                <input type="text" class="form-control" id="domisili" name="domisili" value="<?= old('domisili') ?>" required />
             </div>
 
-            <!-- Perusahaan -->
-            <div class="form-floating mb-2">
-                <input id="perusahaan" class="form-control <?= (validation_show_error('perusahaan')) ? 'is-invalid' : ''; ?>"
-                    type="text" name="perusahaan"
-                    value="<?= old('perusahaan', $perusahaan ?? '') ?>"
-                    placeholder="Perusahaan" />
-                <div class="invalid-feedback">
-                    <?= validation_show_error('perusahaan'); ?>
-                </div>
-                <label for="perusahaan">Perusahaan</label>
+            <!-- Perusahaan (Opsional) -->
+            <div class="mb-3">
+                <label for="perusahaan" class="form-label">Perusahaan (Opsional)</label>
+                <input type="text" class="form-control" id="perusahaan" name="perusahaan" value="<?= old('perusahaan') ?>" />
             </div>
 
-            <!-- Jabatan -->
-            <div class="form-floating mb-2">
-                <input id="jabatan" class="form-control <?= (validation_show_error('jabatan')) ? 'is-invalid' : ''; ?>"
-                    type="text" name="jabatan"
-                    value="<?= old('jabatan', $jabatan ?? '') ?>"
-                    placeholder="Jabatan" />
-                <div class="invalid-feedback">
-                    <?= validation_show_error('jabatan'); ?>
-                </div>
-                <label for="jabatan">Jabatan</label>
+            <!-- Jabatan (Opsional) -->
+            <div class="mb-3">
+                <label for="jabatan" class="form-label">Jabatan (Opsional)</label>
+                <input type="text" class="form-control" id="jabatan" name="jabatan" value="<?= old('jabatan') ?>" />
             </div>
 
-            <!-- Alamat Perusahaan -->
-            <div class="form-floating mb-2">
-                <textarea id="alamatPerusahaan" name="alamatPerusahaan"
-                    class="form-control overlayscollbar <?= (validation_show_error('alamatPerusahaan')) ? 'is-invalid' : ''; ?>"
-                    rows="5" type="text" placeholder="Alamat perusahaan"><?= old('alamatPerusahaan', $alamatPerusahaan ?? '') ?></textarea>
-                <label for="alamatPerusahaan">Alamat perusahaan</label>
-                <div class="invalid-feedback mb-2">
-                    <?= validation_show_error('alamatPerusahaan'); ?>
-                </div>
+            <!-- Alamat Perusahaan (Opsional) -->
+            <div class="mb-3">
+                <label for="alamatPerusahaan" class="form-label">Alamat Perusahaan (Opsional)</label>
+                <textarea class="form-control" id="alamatPerusahaan" name="alamatPerusahaan"><?= old('alamatPerusahaan') ?></textarea>
             </div>
 
-            <!-- Jenis ID -->
-            <div class="form-floating mb-2">
-                <select class="form-control <?= (validation_show_error('id_type')) ? 'is-invalid' : ''; ?>" name="id_type" required>
-                    <option value="ktp" <?= old('id_type') == 'ktp' ? 'selected' : ''; ?>>KTP</option>
-                    <option value="sims" <?= old('id_type') == 'sims' ? 'selected' : ''; ?>>SIM</option>
-                    <option value="pasport" <?= old('id_type') == 'pasport' ? 'selected' : ''; ?>>Paspor</option>
+            <!-- Tipe ID -->
+            <div class="mb-3">
+                <label for="id_type" class="form-label">Tipe ID *</label>
+                <select class="form-select" id="id_type" name="id_type" required>
+                    <option value="">-- Pilih Tipe ID --</option>
+                    <option value="ktp" <?= old('id_type') == 'ktp' ? 'selected' : '' ?>>KTP</option>
+                    <option value="sims" <?= old('id_type') == 'sims' ? 'selected' : '' ?>>SIM</option>
+                    <option value="pasport" <?= old('id_type') == 'pasport' ? 'selected' : '' ?>>Paspor</option>
                 </select>
-                <label for="id_type">Jenis ID *</label>
-                <div class="invalid-feedback">
-                    <?= validation_show_error('id_type'); ?>
-                </div>
             </div>
 
             <!-- Nomor ID -->
-            <div class="form-group">
-                <label for="nomor_id">Nomor ID*</label>
-                <input type="text" name="nomor_id" id="nomor_id"
-                    class="form-control"
-                    value="<?= old('nomor_id', $nomor_id ?? '') ?>"
-                    placeholder="Masukkan Nomor ID" required>
-                <?php if (isset($validation) && $validation->hasError('nomor_id')): ?>
-                    <div class="text-danger"><?= $validation->getError('nomor_id') ?></div>
-                <?php endif; ?>
+            <div class="mb-3">
+                <label for="nomor_id" class="form-label">Nomor ID *</label>
+                <input type="text" class="form-control" id="nomor_id" name="nomor_id" value="<?= old('nomor_id') ?>" required />
             </div>
 
             <!-- Jenis Kelamin -->
-            <div class="form-floating mb-2">
-                <select class="form-control <?= (validation_show_error('gender')) ? 'is-invalid' : ''; ?>" name="gender" required>
-                    <option value="laki-laki" <?= old('gender') == 'laki-laki' ? 'selected' : ''; ?>>Laki-Laki</option>
-                    <option value="perempuan" <?= old('gender') == 'perempuan' ? 'selected' : ''; ?>>Perempuan</option>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Jenis Kelamin *</label>
+                <select class="form-select" id="gender" name="gender" required>
+                    <option value="">-- Pilih Jenis Kelamin --</option>
+                    <option value="laki-laki" <?= old('gender') == 'laki-laki' ? 'selected' : '' ?>>Laki-laki</option>
+                    <option value="perempuan" <?= old('gender') == 'perempuan' ? 'selected' : '' ?>>Perempuan</option>
                 </select>
-                <label for="gender">Jenis Kelamin *</label>
-                <div class="invalid-feedback">
-                    <?= validation_show_error('gender'); ?>
-                </div>
             </div>
 
             <!-- Metode Pembayaran -->
-            <div class="form-floating mb-2">
-                <select class="form-control <?= (validation_show_error('payment_method')) ? 'is-invalid' : ''; ?>" name="payment_method" required>
-                    <option value="transfer" <?= old('payment_method') == 'transfer' ? 'selected' : ''; ?>>Transfer</option>
-                    <option value="gopay" <?= old('payment_method') == 'gopay' ? 'selected' : ''; ?>>GoPay</option>
-                    <option value="shoppepay" <?= old('payment_method') == 'shoppepay' ? 'selected' : ''; ?>>ShopeePay</option>
-                    <option value="dana" <?= old('payment_method') == 'dana' ? 'selected' : ''; ?>>DANA</option>
+            <div class="mb-3">
+                <label for="payment_method" class="form-label">Metode Pembayaran *</label>
+                <select class="form-select" id="payment_method" name="payment_method" required>
+                    <option value="">-- Pilih Metode Pembayaran --</option>
+                    <option value="transfer" <?= old('payment_method') == 'transfer' ? 'selected' : '' ?>>Transfer</option>
+                    <option value="gopay" <?= old('payment_method') == 'gopay' ? 'selected' : '' ?>>GoPay</option>
+                    <option value="shoppepay" <?= old('payment_method') == 'shoppepay' ? 'selected' : '' ?>>ShopeePay</option>
+                    <option value="dana" <?= old('payment_method') == 'dana' ? 'selected' : '' ?>>DANA</option>
                 </select>
-                <label for="payment_method">Metode Pembayaran *</label>
-                <div class="invalid-feedback">
-                    <?= validation_show_error('payment_method'); ?>
-                </div>
             </div>
 
-            <!-- Captcha -->
-            <div class="g-recaptcha mb-2" data-sitekey="6LeXtpApAAAAAHXQ_XsWs-zpmKXd4bk9klTyQASw"></div>
-
             <!-- Tombol Kirim -->
-            <button class="btn btn-outline-dark btn-lg mt-2" type="submit" data-aos="zoom-in">Kirim</button>
+            <button type="submit" class="btn btn-primary">Kirim</button>
         </form>
-
     </div>
-</div>
 </div>
 <?= $this->endSection() ?>
 
@@ -176,44 +156,18 @@ helper('form');
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $("#id_provinsi").change(function(e) {
-            var id_provinsi = $("#id_provinsi").val();
-            $.ajax({
-                type: "POST",
-                url: "<?php echo base_url('payment/Kabupaten') ?>",
-                data: {
-                    id_provinsi: id_provinsi
-                },
-                dataType: "html", // Mengubah dataType menjadi html
-                success: function(response) {
-                    $("#id_kabupaten").html(response);
-                },
-                error: function(xhr, status, error) {
-                    console.log("Error: " + error);
-                }
-            });
-        });
 
-        $("#id_kabupaten").change(function(e) {
-            var id_kabupaten = $("#id_kabupaten").val();
-            $.ajax({
-                type: "POST",
-                url: "<?php echo base_url('payment/Kecamatan') ?>",
-                data: {
-                    id_kabupaten: id_kabupaten
-                },
-                dataType: "html", // Mengubah dataType menjadi html
-                success: function(response) {
-                    $("#id_kecamatan").html(response);
-                },
-                error: function(xhr, status, error) {
-                    console.log("Error: " + error);
-                }
-            });
+<script>
+    function setPackage(packageName, packagePrice) {
+        $.post('/pendaftaran/setPackage', {
+            package_name: packageName,
+            package_price: packagePrice
+        }, function() {
+            window.location.href = '/pendaftaran'; // Redirect ke form pendaftaran
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.error("Request failed: " + textStatus + ", " + errorThrown);
         });
-    });
+    }
 </script>
-<script src='https://www.google.com/recaptcha/api.js'></script>
+
 <?= $this->endSection(); ?>

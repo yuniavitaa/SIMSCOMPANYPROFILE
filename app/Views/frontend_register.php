@@ -1,7 +1,21 @@
+<?= $this->extend('layout/frontend_template') ?>
+<?= $this->section('content') ?>
+
 <body>
     <div id="app">
         <section class="section">
             <div class="container mt-5">
+                <?php if (session()->getFlashdata('success')): ?>
+                    <div class="alert alert-success">
+                        <?= session()->getFlashdata('success'); ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert alert-danger">
+                        <?= session()->getFlashdata('error'); ?>
+                    </div>
+                <?php endif; ?>
                 <div class="row">
                     <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
                         <div class="login-brand">
@@ -98,3 +112,4 @@
             </div>
         </section>
     </div>
+    <?= $this->endSection() ?>

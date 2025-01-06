@@ -133,6 +133,21 @@
       cursor: pointer;
       text-decoration: underline;
     }
+
+    .profile-avatar {
+      width: 32px;
+      height: 32px;
+      background-color: #4caf50;
+      /* Warna background avatar */
+      color: #fff;
+      /* Warna inisial */
+      font-weight: bold;
+      /* Tebal inisial */
+      text-transform: uppercase;
+      /* Inisial dalam huruf besar */
+      font-size: 14px;
+      /* Ukuran font inisial */
+    }
   </style>
 </head>
 
@@ -141,7 +156,7 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-black shadow-lg">
     <div class="container">
       <a class="navbar-brand" href="<?= base_url('/') ?>">
-        <img src="assets/img/SIMS.png" height="30" alt="SIMS Logo" loading="lazy" />
+        <img src="<?= base_url('assets/img/SIMS.png') ?>" height="30" alt="SIMS Logo" loading="lazy" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="bi bi-list"></i>
@@ -154,20 +169,46 @@
           <li class="nav-item"><a class="nav-link" href="<?= base_url('contact_us') ?>">Contact Us</a></li>
           <li class="nav-item"><a class="nav-link" href="<?= base_url('blog') ?>">Blog</a></li>
           <li class="nav-item dropdown">
-            <a href="/pendaftaran/uploadBukti" class="nav-link">
+            <a href="/pendaftaran/resetNotifikasi" class="nav-link">
               <i class="fa fa-bell"></i>
-              <span class="badge bg-danger">
-                <?= session()->get('notifikasi') ?? 0 ?>
-              </span>
+              <?php if (session()->get('notifikasi') > 0) : ?>
+                <span class="badge badge-danger"><?= session()->get('notifikasi') ?></span>
+              <?php endif; ?>
             </a>
           </li>
         </ul>
-        <!-- Button Login/Logout -->
+        <!-- Profile/Logout Dropdown -->
         <?php if (session()->get('logged_in')): ?>
-          <a href="<?= base_url('logout') ?>" class="btn btn-danger ms-lg-3">Logout</a>
+          <div class="dropdown ms-lg-3">
+            <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="profile-avatar d-flex justify-content-center align-items-center rounded-circle me-2">
+                <?php
+                // Get the first and last name from the fullname
+                $fullName = session()->get('fullname');
+                $nameParts = explode(' ', $fullName); // Split the name by spaces
+                $initials = strtoupper(substr($nameParts[0], 0, 1)); // Get the first letter of the first name
+                if (count($nameParts) > 1) {
+                  $initials .= strtoupper(substr($nameParts[1], 0, 1)); // Get the first letter of the last name (if available)
+                }
+                echo $initials;
+                ?>
+              </div>
+              <span><?= session()->get('fullname') ?></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser">
+              <li><a class="dropdown-item" href="<?= base_url('profile') ?>">Profile</a></li>
+              <li><a class="dropdown-item" href="<?= base_url('settings') ?>">Settings</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="<?= base_url('logout') ?>">Logout</a></li>
+            </ul>
+          </div>
         <?php else: ?>
           <a href="<?= base_url('login') ?>" class="btn btn-primary ms-lg-3">Login</a>
         <?php endif; ?>
+
+
       </div>
     </div>
   </nav>

@@ -32,6 +32,7 @@ $routes->set404Override();
 // Default route
 $routes->get('/', 'Home::index');
 
+
 // User Authentication Routes
 $routes->get('login', 'User::login');
 $routes->get('register', 'User::register');
@@ -43,9 +44,19 @@ $routes->get('/logout', 'User::logout');
 $routes->get('/admin/user', 'User::listUsers');
 $routes->get('/admin/user/create', 'User::createUser'); // Form create
 $routes->post('/admin/user/create', 'User::createUser'); // Proses create
-$routes->get('/admin/user/edit/(:num)', 'User::editUser'); // Form edit
-$routes->post('/admin/user/edit/(:num)', 'User::editUser'); // Proses edit
-$routes->get('/admin/user/delete/(:num)', 'User::deleteUser'); // Proses delete
+// Route GET untuk menampilkan form edit
+$routes->get('/admin/user/edit/(:num)', 'User::editUser/$1');
+
+// Route POST untuk mengupdate data user
+$routes->post('/admin/user/edit/(:num)', 'User::editUser/$1');
+
+$routes->get('/admin/user/delete/(:num)', 'User::deleteUser/$1'); // Proses delete
+
+
+
+
+
+
 
 
 
@@ -68,9 +79,20 @@ $routes->post('payment/Kabupaten', 'Payment::Kabupaten');
 $routes->post('payment/Kecamatan', 'Payment::Kecamatan');
 $routes->post('payment/simpan', 'Payment::simpan');
 
+
 // Blog Routes
-$routes->get('blog', 'Blog::blog');
-$routes->get('blog_item', 'Blog::blog_item');
+$routes->get('blog', 'BlogController::index'); // Menampilkan daftar blog
+$routes->get('blog/(:num)', 'BlogController::detail/$1'); // Menampilkan detail blog berdasarkan ID
+// Blog Admin
+$routes->get('/admin/blog', 'BlogController::adminIndex'); // Menampilkan daftar blog di admin
+$routes->get('/admin/blog/create', 'BlogController::create'); // Form create
+$routes->post('/admin/blog/store', 'BlogController::store'); // Proses create
+$routes->get('/admin/blog/edit/(:num)', 'BlogController::edit/$1'); // Form edit
+$routes->post('/admin/blog/update/(:num)', 'BlogController::update/$1'); // Proses edit
+
+$routes->get('/admin/blog/delete/(:num)', 'BlogController::deleteBlog/$1'); // Hapus blog
+
+
 
 // Experience and About Us Routes
 $routes->get('experience', 'Experience::experience');
@@ -81,16 +103,67 @@ $routes->get('contact_us', 'ContactUs::contact_us');
 $routes->post('contact_us/save', 'ContactUs::saveMessage');
 $routes->get('admin/contact-us', 'ContactUs::index');
 
+
+
 // form pendaftaran dan upload bukti
 $routes->get('/pendaftaran', 'PendaftaranAnggota::index');
 $routes->post('/pendaftaran/kirim', 'PendaftaranAnggota::kirim');
 $routes->get('pendaftaran/uploadBukti', 'PendaftaranAnggota::uploadBukti');
-$routes->post('pendaftaran/prosesUploadBukti', 'PendaftaranAnggota::prosesUploadBukti');
-$routes->post('proses-upload-bukti', 'PendaftaranAnggota::prosesUploadBukti');
+$routes->get('/pendaftaran/uploadBukti/(:num)', 'PendaftaranAnggota::uploadBukti/$1');
+$routes->post('/pendaftaran/prosesUploadBukti', 'PendaftaranAnggota::prosesUploadBukti');
+$routes->get('/pendaftaran/riwayatPembelian', 'PendaftaranAnggota::riwayatPembelian');
+$routes->get('/pendaftaran/riwayatPembelian', 'PendaftaranAnggota::riwayatPembelian');
+$routes->post('pendaftaran-anggota/kirim', 'PendaftaranAnggota::kirim');
+$routes->post('/pendaftaran-anggota/prosesUploadBukti', 'PendaftaranAnggota::prosesUploadBukti'); // Tambahkan ini
+
+$routes->get('/pendaftaran/detailRiwayat/(:num)', 'PendaftaranAnggota::detailRiwayat/$1');
+
+$routes->post('/pendaftaran/setPackage', 'PendaftaranAnggota::setPackage');
+$routes->get('uploads/(:any)', function ($file) {
+    $path = WRITEPATH . 'uploads/' . basename($file); // Hindari traversal direktori
+    if (file_exists($path)) {
+        $mime = mime_content_type($path);
+        header('Content-Type: ' . $mime);
+        header('Content-Length: ' . filesize($path));
+        readfile($path);
+        exit;
+    } else {
+        throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+    }
+});
+$routes->post('/pendaftaran/prosesUploadBukti', 'PendaftaranAnggota::prosesUploadBukti');
+// app/Config/Routes.php
+$routes->get('/pendaftaran/uploadBukti/(:num)', 'PendaftaranAnggota::uploadBukti/$1');
+
+$routes->get('/pendaftaran/resetNotifikasi', 'PendaftaranAnggota::resetNotifikasi');
+
+//pendaftran admin 
+
+$routes->get('/pendaftaran/daftar', 'PendaftaranAnggota::daftar');
+$routes->get('/pendaftaran/detail/(:num)', 'PendaftaranAnggota::detail/$1');
+$routes->get('/pendaftaran/hapus/(:num)', 'PendaftaranAnggota::hapus/$1');
+
+// Menampilkan daftar pembayaran untuk admin
+$routes->get('/pendaftaran/daftarPembayaran', 'PendaftaranAnggota::daftarPembayaran');
+
+
+$routes->post('/admin/updateStatus/(:num)', 'PendaftaranAnggota::updateStatus/$1');
+$routes->get('/admin/riwayat', 'PendaftaranAnggota::riwayat');
+
 
 
 // Dashboard Route
 $routes->get('dashboard', 'Dashboard::index');
+
+$routes->get('admin/dashboard', 'Dashboard::index');
+
+
+$routes->get('/pendaftaran/riwayatPembelian/verifyOrder/(:num)', 'PendaftaranAnggota::verifyOrder/$1');
+
+$routes->get('/admin/logout', 'User::logout');
+
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -19,44 +19,6 @@
         background-color: rgba(0, 0, 0, 0.8) !important;
     } */
 
-    .hero-section {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        background-image: url('<?= base_url('assets/img/Blog/Frame Blog.png') ?>');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-
-    }
-
-    .hero-content h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
-
-    .hero-content p {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .rounded-button {
-        border-radius: 50px;
-    }
-
     .button-group .btn.active {
         background: linear-gradient(135deg, #ff416c, #4688f1);
         color: white;
@@ -115,117 +77,153 @@
     .pagination .active .page-link {
         border: none;
     }
+
+
+
+    .blog-list {
+        text-align: center;
+    }
+
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .blog-item {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #2d66c5;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .blog-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-info {
+        padding: 15px;
+        text-align: left;
+    }
+
+    .blog-date {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 5px;
+    }
+
+    .blog-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .blog-title a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .blog-title a:hover {
+        text-decoration: underline;
+    }
 </style>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
 <!-- Hero Section -->
 <header class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="container" style="z-index: 1;">
-        <div class="row">
-            <div class="col">
-                <span class="badge badge-pill badge-light text-dark mb-3 px-3 py-2" style="border-radius:50px;">News</span>
-                <div class="hero-content">
-                    <p class="chakra-petch-bold"> 1st May 2024</p>
-                    <h1>PT SIMS has become the tenth decacorn company in Indonesia</h1>
-                    <p class="chakra-petch-bold">Digital TV service employs FTTH (fiber To The Home) technology and offers numerous Free To Air and Premium channels.</p>
-                    <a href="<?= base_url('blog_item'); ?>" class="btn btn-outline-light btn-lg chakra-petch-medium" data-mdb-ripple-init>Selengkapnya</a>
-                </div>
-            </div>
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <?php foreach ($blogs as $index => $blog): ?>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="<?= $index; ?>" class="<?= $index === 0 ? 'active' : ''; ?>" aria-current="<?= $index === 0 ? 'true' : ''; ?>" aria-label="Slide <?= $index + 1; ?>"></button>
+            <?php endforeach; ?>
         </div>
+
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <?php foreach ($blogs as $index => $blog): ?>
+                <div class="carousel-item <?= $index === 0 ? 'active' : ''; ?>" style="position: relative;">
+                    <div class="hero-overlay"></div>
+                    <img src="<?= base_url('assets/img/Blog/' . esc($blog['image'] ?? 'default.png')); ?>" class="d-block w-100" alt="<?= esc($blog['title']); ?>">
+                    <div class="container" style="z-index: 1; position: absolute; top: 50%; transform: translateY(-50%);">
+                        <div class="row">
+                            <div class="col">
+                                <span class="badge badge-pill badge-light text-dark mb-3 px-3 py-2" style="border-radius:50px;">News</span>
+                                <div class="hero-content">
+                                    <p class="chakra-petch-bold"><?= date('d F Y', strtotime($blog['created_at'])); ?></p>
+                                    <h1><?= esc($blog['title']); ?></h1>
+                                    <p class="chakra-petch-bold"><?= esc($blog['content']); ?></p>
+                                    <a href="<?= base_url('frontend_blog_item' . $blog['id']); ?>" class="btn btn-outline-light btn-lg chakra-petch-medium" data-mdb-ripple-init>Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </header>
 
-<section>
-    <div class="container mt-4">
-        <div class="row align-items-center">
-            <div class="col-auto">
-                <div class="button-group" role="group" aria-label="Filter Options">
-                    <button type="button" class="btn rounded-button ">Event</button>
-                    <button type="button" class="btn active rounded-button">News</button>
-                    <button type="button" class="btn rounded-button">Article</button>
-                </div>
-            </div>
-            <div class="col"></div>
 
-            <div class="col-auto ">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-primary" type="button" style="width: 50px;">
-                        <i class="bi bi-search"></i>
-                    </button>
+<section class="blog-list">
+    <?php if (!empty($blogs) && is_array($blogs)): ?>
+        <div class="blog-grid">
+            <?php foreach ($blogs as $blog): ?>
+                <div class="blog-item">
+                    <div class="blog-badge">Blog</div>
+                    <?php
+                    $imagePath = 'assets/img/Blog/' . esc($blog['image'] ?? 'default.png');
+                    if (!file_exists(FCPATH . $imagePath)) {
+                        $imagePath = 'assets/img/Blog/default.png'; // Gambar default
+                    }
+                    ?>
+                    <img src="<?= base_url($imagePath); ?>" alt="<?= esc($blog['title'] ?? 'Blog'); ?>">
+                    <div class="blog-info">
+                        <p class="blog-date">
+                            <?= isset($blog['created_at']) ? date('d F Y', strtotime($blog['created_at'])) : 'Tanggal tidak tersedia'; ?>
+                        </p>
+                        <h2 class="blog-title">
+                            <a href="<?= base_url('blog/' . ($blog['id'] ?? '#')); ?>">
+                                <?= esc($blog['title'] ?? 'Judul tidak tersedia'); ?>
+                            </a>
+                        </h2>
+                    </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
         </div>
-    </div>
+    <?php else: ?>
+        <p>Belum ada blog yang tersedia.</p>
+    <?php endif; ?>
 </section>
-</br>
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card shadow rounded-0" style="width: 100%;">
-                    <img class="card-img-top rounded-0" src="<?= base_url('assets/img/Blog/Media.png') ?>" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">PT SIMS Bekerja Sama dengan Harvard Univ...</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow rounded-0" style="width: 100%;">
-                    <img class="card-img-top rounded-0" src="<?= base_url('assets/img/Blog/Media 2.png') ?>" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">PT SIMS Bekerja Sama dengan Harvard Univ...</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow rounded-0" style="width: 100%;">
-                    <img class="card-img-top rounded-0" src="<?= base_url('assets/img/Blog/Media 3.png') ?>" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">PT SIMS Bekerja Sama dengan Harvard Univ...</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="card shadow rounded-0 " style="width: 100%;">
-                    <img class="card-img-top rounded-0" src="<?= base_url('assets/img/Blog/Media 4.png') ?>" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">PT SIMS Bekerja Sama dengan Harvard Univ...</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow rounded-0" style="width: 100%;">
-                    <img class="card-img-top rounded-0" src="<?= base_url('assets/img/Blog/Media 5.png') ?>" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">PT SIMS Bekerja Sama dengan Harvard Univ...</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="card shadow rounded-0" style="width: 100%;">
-                    <img class="card-img-top rounded-0" src="<?= base_url('assets/img/Blog/Media 6.png') ?>" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">PT SIMS Bekerja Sama dengan Harvard Univ...</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-</br>]
+
+
 
 <!-- Pagination -->
 <nav aria-label="Page navigation example">

@@ -1,0 +1,28 @@
+CRITICAL - 2025-01-06 10:48:04 --> passthru(): Unable to fork ["D:\xampp\php\php.exe" -S localhost:8080 -t "D:\xampp\htdocs\sims4\WEBSIMS\public\\" "D:\xampp\htdocs\sims4\WEBSIMS\system\Commands\Server/rewrite.php"]
+in SYSTEMPATH\Commands\Server\Serve.php on line 109.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'passthru(): Unable to fork ["D:\\xampp\\php\\php.exe" -S localhost:8080 -t "D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\\\" "D:\\xampp\\htdocs\\sims4\\WEBSIMS\\system\\Commands\\Server/rewrite.php"]', 'D:\\xampp\\htdocs\\sims4\\WEBSIMS\\system\\Commands\\Server\\Serve.php', 109)
+ 2 SYSTEMPATH\Commands\Server\Serve.php(109): passthru('"D:\\xampp\\php\\php.exe" -S localhost:8080 -t "D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\\\" "D:\\xampp\\htdocs\\sims4\\WEBSIMS\\system\\Commands\\Server/rewrite.php"', null)
+ 3 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Commands\Server\Serve->run([])
+ 4 SYSTEMPATH\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('serve', [])
+ 5 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+INFO - 2025-01-06 10:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-06 10:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

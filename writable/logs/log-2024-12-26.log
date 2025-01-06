@@ -1,0 +1,1032 @@
+INFO - 2024-12-26 02:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 02:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 02:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 02:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 02:35:06 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\pendaftaran_anggota.php on line 58.
+ 1 APPPATH\Views\pendaftaran_anggota.php(58): number_format(null, 0, ',', '.')
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\pendaftaran_anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pendaftaran_anggota', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(33): view('pendaftaran_anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 02:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 02:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 02:35:11 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 98.
+ 1 APPPATH\Views\riwayat_pembelian.php(98): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 02:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 02:38:13 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 98.
+ 1 APPPATH\Views\riwayat_pembelian.php(98): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 02:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 02:44:48 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 02:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 02:59:10 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 02:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 02:59:33 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:06:44 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:06:48 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 03:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:12:14 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:12:57 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:14:05 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 03:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:40:46 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:41:25 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:42:44 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:51:13 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 109.
+ 1 APPPATH\Views\riwayat_pembelian.php(109): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:52:04 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-26 03:52:40 --> Undefined variable $item
+in APPPATH\Views\riwayat_pembelian.php on line 2.
+ 1 APPPATH\Views\riwayat_pembelian.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $item', 'D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:53:18 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 109.
+ 1 APPPATH\Views\riwayat_pembelian.php(109): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 03:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 03:53:50 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 07:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 07:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 07:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 07:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 07:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 07:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 07:13:31 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\pendaftaran_anggota.php on line 58.
+ 1 APPPATH\Views\pendaftaran_anggota.php(58): number_format(null, 0, ',', '.')
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\pendaftaran_anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pendaftaran_anggota', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(33): view('pendaftaran_anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 07:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 07:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 07:13:44 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 07:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 07:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 07:13:56 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+WARNING - 2024-12-26 07:35:42 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\admin\bukti_list.php on line 43.
+ 1 APPPATH\Views\admin\bukti_list.php(43): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\admin\\bukti_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/bukti_list', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(268): view('admin/bukti_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->daftarPembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+WARNING - 2024-12-26 07:35:44 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\admin\bukti_list.php on line 43.
+ 1 APPPATH\Views\admin\bukti_list.php(43): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\admin\\bukti_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/bukti_list', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(268): view('admin/bukti_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->daftarPembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+WARNING - 2024-12-26 07:35:47 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\admin\bukti_list.php on line 43.
+ 1 APPPATH\Views\admin\bukti_list.php(43): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\admin\\bukti_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/bukti_list', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(268): view('admin/bukti_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->daftarPembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 07:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 07:36:56 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 07:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 07:44:37 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+WARNING - 2024-12-26 07:45:24 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\admin\bukti_list.php on line 42.
+ 1 APPPATH\Views\admin\bukti_list.php(42): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\admin\\bukti_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/bukti_list', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(267): view('admin/bukti_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->daftarPembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 07:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 07:45:35 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\admin\bukti_list.php on line 42.
+ 1 APPPATH\Views\admin\bukti_list.php(42): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\admin\\bukti_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/bukti_list', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(267): view('admin/bukti_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->daftarPembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 07:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 07:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 07:46:23 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 07:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 07:47:27 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 07:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 07:48:14 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 08:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 08:56:50 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\riwayat_pembelian.php on line 100.
+ 1 APPPATH\Views\riwayat_pembelian.php(100): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\riwayat_pembelian.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('riwayat_pembelian', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(188): view('riwayat_pembelian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->riwayatPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 09:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:20:07 --> Payment Method: dana
+INFO - 2024-12-26 09:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:40:14 --> Payment Method: transfer
+INFO - 2024-12-26 09:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:49:28 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 09:49:28 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 09:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:49:46 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 09:49:46 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 09:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:54:54 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 09:54:54 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 09:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:56:41 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 09:56:41 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 09:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 09:59:23 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 09:59:23 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 10:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 10:00:14 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 10:00:14 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 10:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 10:00:40 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 10:00:40 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 10:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 10:01:26 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 10:01:26 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 10:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 10:01:46 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 10:01:46 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 10:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 11:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 11:29:03 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 11:29:03 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 11:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 11:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:05:48 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 12:05:48 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 12:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:11:08 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 12:11:08 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 12:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:18:37 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 12:18:37 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 12:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:18:51 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 12:18:51 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 12:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:23:25 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 12:23:25 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 12:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:27:27 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 12:27:27 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 12:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:27:56 --> Riwayat Sedang Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 12:27:56 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 12:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:28:37 --> Riwayat Sedang Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 12:28:37 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 12:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 12:38:56 --> Riwayat Sedang Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 12:38:56 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 13:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 13:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 13:47:21 --> Riwayat Sedang Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 13:47:21 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 13:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 13:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 13:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 13:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-26 13:48:11 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\pendaftaran_anggota.php on line 58.
+ 1 APPPATH\Views\pendaftaran_anggota.php(58): number_format(null, 0, ',', '.')
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\app\\Views\\pendaftaran_anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pendaftaran_anggota', [], true)
+ 5 APPPATH\Controllers\PendaftaranAnggota.php(33): view('pendaftaran_anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PendaftaranAnggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PendaftaranAnggota))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\sims4\\WEBSIMS\\public\\index.php')
+INFO - 2024-12-26 13:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 13:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 13:49:03 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 13:49:03 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 14:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 14:01:03 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 14:01:03 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 14:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 14:08:37 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 14:08:37 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 14:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 14:10:27 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 14:10:27 --> Riwayat Sudah Verifikasi: Array
+(
+)
+
+INFO - 2024-12-26 14:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-26 14:51:55 --> Riwayat Sedang Verifikasi: Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [pendaftaran_id] => 55
+            [nama] => Ahmad Ramadhan
+            [email] => ahmad@gmail.com
+            [nomor_hp] => 082672252627282
+            [payment_method] => transfer
+            [bukti_pembayaran] => 1735206023_7b1ae993d6e929e45326.png
+            [created_at] => 2024-12-26 16:40:14
+            [updated_at] => 2024-12-26 16:40:14
+            [status] => sedang_verifikasi
+            [package_name] => Paket Menengah
+            [package_price] => 2500000.00
+        )
+
+)
+
+INFO - 2024-12-26 14:51:55 --> Riwayat Sudah Verifikasi: Array
+(
+)
+

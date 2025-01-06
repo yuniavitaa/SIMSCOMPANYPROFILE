@@ -1,4 +1,4 @@
-<?= $this->extend('layout/admin_template') ?>
+<?= $this->extend('templates/admin_dashboard') ?>
 
 <?= $this->section('content') ?>
 

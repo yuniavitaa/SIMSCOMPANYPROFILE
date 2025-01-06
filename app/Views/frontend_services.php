@@ -597,9 +597,9 @@
 </div>
 <br>
 
-
-<!-- Include Template Produk -->
 <?= view('layout/frontend_product') ?>
+
+
 
 
 <section class="alt-section text-white d-flex" style="background-color: #000; color: white;">

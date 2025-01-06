@@ -46,4 +46,6 @@ class ContactUs extends BaseController
         return view('admin/contact_list', $data);
     }
 
+    
+
 }

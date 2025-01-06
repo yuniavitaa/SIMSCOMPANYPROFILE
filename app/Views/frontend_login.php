@@ -1,3 +1,4 @@
+<?= $this->extend('layout/frontend_template') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,11 +18,23 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/components.css">
 </head>
+<?= $this->section('content') ?>
 
 <body>
     <div id="app">
         <section class="section">
             <div class="container mt-5">
+                <?php if (session()->getFlashdata('success')): ?>
+                    <div class="alert alert-success">
+                        <?= session()->getFlashdata('success'); ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert alert-danger">
+                        <?= session()->getFlashdata('error'); ?>
+                    </div>
+                <?php endif; ?>
                 <div class="row">
                     <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                         <div class="login-brand">
@@ -71,11 +84,11 @@
                                         </button>
                                     </div>
                                 </form>
-                            
+
                             </div>
                         </div>
                         <div class="mt-5 text-muted text-center">
-                            Don't have an account? <a href="<?= base_url('register')?>">Create Now</a>
+                            Don't have an account? <a href="<?= base_url('register') ?>">Create Now</a>
                         </div>
                     </div>
                 </div>
@@ -101,3 +114,4 @@
 </body>
 
 </html>
+<?= $this->endSection() ?>

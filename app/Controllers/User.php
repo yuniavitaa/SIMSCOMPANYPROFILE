@@ -16,7 +16,7 @@ class User extends BaseController
         ];
         return view('templates/admin_dashboard', $data);
     }
-    
+
 
     public function login()
     {
@@ -39,7 +39,30 @@ class User extends BaseController
     public function regis()
     {
         $userData = new M_User();
+
+        // Validasi input: Pastikan semua field terisi
+        if (empty($_POST['fullname'])  || empty($_POST['email']) || empty($_POST['password'])) {
+            // Set flashdata untuk menampilkan error jika ada field yang kosong
+            session()->setFlashdata('error', 'Semua field harus diisi!');
+            return redirect()->to('/register'); // Kembali ke halaman registrasi
+        }
+
+        // Validasi format email
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            session()->setFlashdata('error', 'Email tidak valid!');
+            return redirect()->to('/register');
+        }
+
+        // Cek apakah email sudah terdaftar
+        $existingUser = $userData->where('email', $_POST['email'])->first();
+        if ($existingUser) {
+            session()->setFlashdata('error', 'Email sudah terdaftar!');
+            return redirect()->to('/register');
+        }
+
         $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+        $_POST['role'] = 'member'; // Set role menjadi 'member'
 
         if (!$userData->insert($_POST)) {
             var_dump($userData->errors());
@@ -78,7 +101,7 @@ class User extends BaseController
             if ($user['role'] === 'admin') {
                 return redirect()->to('/dashboard');
             } else {
-                return redirect()->to('/pendaftaran'); // Arahkan ke form pendaftaran
+                return redirect()->to('/'); // Arahkan ke form pendaftaran
             }
         } else {
             // Jika gagal login
@@ -127,44 +150,60 @@ class User extends BaseController
         return view('admin/user_create');
     }
 
-    public function editUser($id)
+    public function editUser($id = null)
     {
-        $model = new M_User();
-        $user = $model->find($id);
+        if ($id === null) {
+            // Jika tidak ada ID di URL, redirect ke halaman user
+            return redirect()->to('/admin/user')->with('error', 'No ID provided.');
+        }
 
+        $model = new M_User();
+        $user = $model->find($id); // Cari user berdasarkan ID
+
+        if (!$user) {
+            // Jika user tidak ditemukan, redirect dengan error message
+            return redirect()->to('/admin/user')->with('error', 'User not found.');
+        }
+
+        // Jika ada method POST (update data)
         if ($this->request->getMethod() === 'post') {
-            // Validasi dan update data
             $data = [
                 'fullname' => $this->request->getPost('fullname'),
-                'email' => $this->request->getPost('email'),
-                'role' => $this->request->getPost('role'),
+                'email'    => $this->request->getPost('email'),
+                'role'     => $this->request->getPost('role'),
                 'date_update' => date('Y-m-d H:i:s'),
             ];
 
-            // Periksa apakah password diubah
             if ($this->request->getPost('password')) {
                 $data['password'] = password_hash($this->request->getPost('password'), PASSWORD_BCRYPT);
             }
 
             $model->update($id, $data);
 
-            return redirect()->to('/admin/user')->with('success', 'User berhasil diperbarui!');
+            return redirect()->to('/admin/user')->with('success', 'User updated successfully.');
         }
 
-        // Tampilkan form edit
+        // Tampilkan view dengan data user
         return view('admin/user_edit', ['user' => $user]);
     }
 
-    public function deleteUser($id)
+
+    public function deleteUser($id = null)
     {
+        if (!$id) {
+            return redirect()->to('/admin/user')->with('error', 'ID pengguna tidak ditemukan.');
+        }
+
         $model = new M_User();
 
         if ($model->delete($id)) {
-            return redirect()->to('/admin/user')->with('success', 'User berhasil dihapus!');
+            return redirect()->to('/admin/user')->with('success', 'Pengguna berhasil dihapus!');
         } else {
-            return redirect()->to('/admin/user')->with('error', 'Gagal menghapus user.');
+            return redirect()->to('/admin/user')->with('error', 'Gagal menghapus pengguna.');
         }
     }
+
+
 
 
 
@@ -173,10 +212,4 @@ class User extends BaseController
         session()->destroy();
         return redirect()->to('/login');
     }
-
-
-
-    
 }
-
-
