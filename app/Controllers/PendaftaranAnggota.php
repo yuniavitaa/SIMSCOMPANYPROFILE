@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\PendaftaranAnggotaModel;
 use App\Models\BuktiPembayaranModel;
 use App\Models\NotificationModel;
+use App\Models\PenilaianModel;
 
 class PendaftaranAnggota extends BaseController
 {
@@ -163,7 +164,8 @@ class PendaftaranAnggota extends BaseController
 
             session()->set('notifikasi', session()->get('notifikasi') + 1);
 
-            return redirect()->back()->with('sukses', 'Bukti pembayaran berhasil diupload!');
+            // Redirect ke halaman riwayat pembelian setelah upload berhasil
+            return redirect()->to('/pendaftaran/riwayatPembelian')->with('sukses', 'Bukti pembayaran berhasil diupload!');
         } else {
             return redirect()->back()->withInput()->with('gagal', 'Gagal mengupload bukti pembayaran.');
         }
@@ -171,12 +173,13 @@ class PendaftaranAnggota extends BaseController
 
     public function riwayatPembelian()
     {
+        $PenilaianModel = new PenilaianModel();
         $userData = session()->get();
         if (!isset($userData['logged_in']) || !$userData['logged_in']) {
             return redirect()->to('/login');
         }
 
-        $email = $userData['email'];
+        $email = session()->get('email'); // Pastikan email session sudah benar
 
         $buktiPembayaranModel = new BuktiPembayaranModel();
         $riwayatSedangVerifikasi = $buktiPembayaranModel->getRiwayatByEmail($email, 'sedang_verifikasi');
@@ -189,6 +192,7 @@ class PendaftaranAnggota extends BaseController
             'riwayatBelumValid' => $riwayatBelumValid,
         ];
 
+        $data['penilaian'] = $PenilaianModel->findAll(); // Ambil semua penilaian
         return view('riwayat_pembelian', $data);
     }
 
@@ -227,7 +231,6 @@ class PendaftaranAnggota extends BaseController
             'title' => 'Daftar Pendaftaran Anggota',
             'dataPendaftaran' => $dataPendaftaran,
         ]);
-
     }
 
 
@@ -291,23 +294,15 @@ class PendaftaranAnggota extends BaseController
 
     public function updateStatusPembayaran($id)
     {
-        // Ensure the request is valid (e.g., valid status)
-        if ($this->request->getPost('status') != 'verified') {
-            return $this->response->setStatusCode(400, 'Invalid status');
+        $buktiPembayaranModel = new BuktiPembayaranModel();
+        $status = $this->request->getPost('status');
+
+        if ($buktiPembayaranModel->updateStatus($id, $status)) {
+            return json_encode(['status' => 'verified']);
         }
 
-        // Update status to 'verified' in the database
-        $buktiPembayaranModel = new BuktiPembayaranModel();
-        $buktiPembayaranModel->update($id, [
-            'status' => 'verified', // Update status in the database
-        ]);
-
-        // Respond with success
-        return $this->response->setJSON([
-            'status' => 'verified'
-        ]);
+        return json_encode(['status' => 'failed']);
     }
-
     protected $buktiPembayaranModel;
 
     public function __construct()
@@ -334,8 +329,95 @@ class PendaftaranAnggota extends BaseController
         return redirect()->to('/admin/riwayat')->with('success', 'Status berhasil diperbarui.');
     }
 
-    
+    public function selesai($pendaftaran_id)
+    {
+        $buktiPembayaranModel = new BuktiPembayaranModel();
 
+        // Update status menjadi "selesai"
+        $buktiPembayaranModel->update($pendaftaran_id, ['status' => 'selesai']);
 
+        // Redirect ke halaman penilaian
+        return redirect()->to('/pendaftaran/nilai/' . $pendaftaran_id);
+    }
+    public function beriNilai($pendaftaran_id)
+    {
+        return view('beri_nilai', ['pendaftaran_id' => $pendaftaran_id]);
+    }
+
+    //Penilaian Produk
+    public function prosesNilai()
+    {
+        $penilaianModel = new PenilaianModel();
+
+        $pendaftaran_id = $this->request->getPost('pendaftaran_id');
+        $rating = $this->request->getPost('rating');
+        $komentar = $this->request->getPost('komentar');
+
+        // Validasi wajib isi
+        if (!$rating || !$komentar) {
+            return redirect()->back()->with('error', 'Rating dan komentar wajib diisi.');
+        }
+
+        // Proses upload foto
+        $fotoFiles = $this->request->getFileMultiple('foto');
+        $fotoPaths = [];
+
+        if (empty($fotoFiles)) {
+            return redirect()->back()->with('error', 'Minimal 1 foto wajib diunggah.');
+        }
+
+        foreach ($fotoFiles as $file) {
+            if ($file->isValid() && !$file->hasMoved()) {
+                $newName = $file->getRandomName();
+                $file->move('uploads/foto/', $newName);
+                $fotoPaths[] = 'uploads/foto/' . $newName;
+            }
+        }
+
+        // Proses upload video
+        $videoFile = $this->request->getFile('video');
+        if (!$videoFile || !$videoFile->isValid()) {
+            return redirect()->back()->with('error', 'Video wajib diunggah.');
+        }
+
+        $videoPath = null;
+        if ($videoFile->isValid() && !$videoFile->hasMoved()) {
+            $newName = $videoFile->getRandomName();
+            $videoFile->move('uploads/video/', $newName);
+            $videoPath = 'uploads/video/' . $newName;
+        }
+
+        // Ambil foto yang ada dari database jika ada
+        $existingPhotos = [];
+        $existingPenilaian = $penilaianModel->find($pendaftaran_id); // Ambil penilaian yang ada berdasarkan ID
+        if ($existingPenilaian && !empty($existingPenilaian['foto'])) {
+            $existingPhotos = json_decode($existingPenilaian['foto'], true) ?? [];
+        }
+
+        // Tambahkan foto baru ke dalam array
+        $existingPhotos = array_merge($existingPhotos, $fotoPaths); // Menggabungkan foto yang ada dengan foto baru
+
+        // Simpan ke database
+        $penilaianModel->save([
+            'pendaftaran_id' => $pendaftaran_id,
+            'rating' => $rating,
+            'komentar' => $komentar,
+            'foto' => json_encode($existingPhotos), // Foto disimpan sebagai JSON
+            'video' => $videoPath,
+        ]);
+
+        return redirect()->to('/pendaftaran/nilai-list')->with('success', 'Penilaian berhasil dikirim.');
+    }
+    //Riwayat Penilaian
+    public function nilaiList()
+    {
+        $penilaianModel = new PenilaianModel();
+        $data['penilaian'] = $penilaianModel->getAllPenilaian();
+
+        foreach ($data['penilaian'] as &$penilaian) {
+            $penilaian['foto'] = json_decode($penilaian['foto'], true); // Mengonversi JSON kembali ke array
+        }
+
+        return view('/nilai_list', $data);
+    }
 }
-

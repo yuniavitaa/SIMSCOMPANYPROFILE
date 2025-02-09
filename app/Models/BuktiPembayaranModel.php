@@ -22,14 +22,18 @@ class BuktiPembayaranModel extends Model
         'package_price',
     ];
 
-    public function getRiwayatByEmail($email, $status = null)
-    {
-        $builder = $this->where('email', $email); // Ini hanya mengambil untuk satu email
-        if ($status !== null) {
-            $builder->where('status', $status);
-        }
-        return $builder->orderBy('created_at', 'DESC')->findAll(); // Pastikan findAll() dipanggil
+   public function getRiwayatByEmail($email, $status = null)
+{
+    $builder = $this->db->table($this->table);
+    $builder->where('email', $email);
+
+    if ($status !== null) {
+        $builder->where('status', $status);
     }
+
+    return $builder->get()->getResult();  // Menjalankan query dan mengembalikan hasilnya
+}
+
 
     protected $useTimestamps = false;  // Mengaktifkan pengisian otomatis untuk created_at dan updated_at
 

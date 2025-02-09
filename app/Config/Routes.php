@@ -163,6 +163,13 @@ $routes->get('/pendaftaran/riwayatPembelian/verifyOrder/(:num)', 'PendaftaranAng
 $routes->get('/admin/logout', 'User::logout');
 
 
+//Penilaian
+$routes->post('/pendaftaran/selesai/(:num)', 'PendaftaranAnggota::selesai/$1');
+$routes->get('/pendaftaran/nilai/(:num)', 'PendaftaranAnggota::beriNilai/$1');
+$routes->post('/pendaftaran/prosesNilai', 'PendaftaranAnggota::prosesNilai');
+$routes->get('pendaftaran/nilai-list', 'PendaftaranAnggota::nilaiList');
+$routes->post('pendaftaran/prosesNilai', 'PendaftaranAnggota::prosesNilai');
+$routes->get('nilai-list', 'PendaftaranAnggota::nilaiList');
 
 /*
  * --------------------------------------------------------------------

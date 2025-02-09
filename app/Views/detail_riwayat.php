@@ -129,6 +129,7 @@
             case 'jpeg':
             case 'png': ?>
                 <img src="<?= $filePath ?>" alt="Bukti Pembayaran" style="max-width: 100%; height: auto;">
+                <p><a href="<?= $filePath ?>" target="_blank">Unduh PDF</a></p>
                 <?php break; ?>
             <?php
             case 'pdf': ?>

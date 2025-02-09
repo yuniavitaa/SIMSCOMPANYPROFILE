@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
@@ -168,6 +169,11 @@
           <li class="nav-item"><a class="nav-link" href="<?= base_url('about_us') ?>">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="<?= base_url('contact_us') ?>">Contact Us</a></li>
           <li class="nav-item"><a class="nav-link" href="<?= base_url('blog') ?>">Blog</a></li>
+          <li>
+            <a href="<?= base_url('/pendaftaran/nilai-list'); ?>">
+              <i class="fas fa-star"></i>
+            </a>
+          </li>
           <li class="nav-item dropdown">
             <a href="/pendaftaran/resetNotifikasi" class="nav-link">
               <i class="fa fa-bell"></i>
@@ -176,40 +182,37 @@
               <?php endif; ?>
             </a>
           </li>
+          <li>
+            <!-- Profile/Logout Dropdown -->
+            <?php if (session()->get('logged_in')): ?>
+              <div class="dropdown ms-lg-3">
+                <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="profile-avatar d-flex justify-content-center align-items-center rounded-circle me-2">
+                    <?php
+                    // Get the first and last name from the fullname
+                    $fullName = session()->get('fullname');
+                    $nameParts = explode(' ', $fullName); // Split the name by spaces
+                    $initials = strtoupper(substr($nameParts[0], 0, 1)); // Get the first letter of the first name
+                    if (count($nameParts) > 1) {
+                      $initials .= strtoupper(substr($nameParts[1], 0, 1)); // Get the first letter of the last name (if available)
+                    }
+                    echo $initials;
+                    ?>
+                  </div>
+                  <span><?= session()->get('fullname') ?></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser">
+                  <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="<?= base_url('logout') ?>">Logout</a></li>
         </ul>
-        <!-- Profile/Logout Dropdown -->
-        <?php if (session()->get('logged_in')): ?>
-          <div class="dropdown ms-lg-3">
-            <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
-              <div class="profile-avatar d-flex justify-content-center align-items-center rounded-circle me-2">
-                <?php
-                // Get the first and last name from the fullname
-                $fullName = session()->get('fullname');
-                $nameParts = explode(' ', $fullName); // Split the name by spaces
-                $initials = strtoupper(substr($nameParts[0], 0, 1)); // Get the first letter of the first name
-                if (count($nameParts) > 1) {
-                  $initials .= strtoupper(substr($nameParts[1], 0, 1)); // Get the first letter of the last name (if available)
-                }
-                echo $initials;
-                ?>
-              </div>
-              <span><?= session()->get('fullname') ?></span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser">
-              <li><a class="dropdown-item" href="<?= base_url('profile') ?>">Profile</a></li>
-              <li><a class="dropdown-item" href="<?= base_url('settings') ?>">Settings</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="<?= base_url('logout') ?>">Logout</a></li>
-            </ul>
-          </div>
-        <?php else: ?>
-          <a href="<?= base_url('login') ?>" class="btn btn-primary ms-lg-3">Login</a>
-        <?php endif; ?>
-
-
       </div>
+    <?php else: ?>
+      <a href="<?= base_url('login') ?>" class="btn btn-primary ms-lg-3">Login</a>
+    <?php endif; ?>
+
+
+    </div>
     </div>
   </nav>
   <!-- Navbar -->
