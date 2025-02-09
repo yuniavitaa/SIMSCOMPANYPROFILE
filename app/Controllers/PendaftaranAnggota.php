@@ -346,68 +346,68 @@ class PendaftaranAnggota extends BaseController
 
     //Penilaian Produk
     public function prosesNilai()
-    {
-        $penilaianModel = new PenilaianModel();
+{
+    $penilaianModel = new PenilaianModel();
 
-        $pendaftaran_id = $this->request->getPost('pendaftaran_id');
-        $rating = $this->request->getPost('rating');
-        $komentar = $this->request->getPost('komentar');
+    $pendaftaran_id = $this->request->getPost('pendaftaran_id');
+    $rating = $this->request->getPost('rating');
+    $komentar = $this->request->getPost('komentar');
 
-        // Validasi wajib isi
-        if (!$rating || !$komentar) {
-            return redirect()->back()->with('error', 'Rating dan komentar wajib diisi.');
-        }
-
-        // Proses upload foto
-        $fotoFiles = $this->request->getFileMultiple('foto');
-        $fotoPaths = [];
-
-        if (empty($fotoFiles)) {
-            return redirect()->back()->with('error', 'Minimal 1 foto wajib diunggah.');
-        }
-
-        foreach ($fotoFiles as $file) {
-            if ($file->isValid() && !$file->hasMoved()) {
-                $newName = $file->getRandomName();
-                $file->move('uploads/foto/', $newName);
-                $fotoPaths[] = 'uploads/foto/' . $newName;
-            }
-        }
-
-        // Proses upload video
-        $videoFile = $this->request->getFile('video');
-        if (!$videoFile || !$videoFile->isValid()) {
-            return redirect()->back()->with('error', 'Video wajib diunggah.');
-        }
-
-        $videoPath = null;
-        if ($videoFile->isValid() && !$videoFile->hasMoved()) {
-            $newName = $videoFile->getRandomName();
-            $videoFile->move('uploads/video/', $newName);
-            $videoPath = 'uploads/video/' . $newName;
-        }
-
-        // Ambil foto yang ada dari database jika ada
-        $existingPhotos = [];
-        $existingPenilaian = $penilaianModel->find($pendaftaran_id); // Ambil penilaian yang ada berdasarkan ID
-        if ($existingPenilaian && !empty($existingPenilaian['foto'])) {
-            $existingPhotos = json_decode($existingPenilaian['foto'], true) ?? [];
-        }
-
-        // Tambahkan foto baru ke dalam array
-        $existingPhotos = array_merge($existingPhotos, $fotoPaths); // Menggabungkan foto yang ada dengan foto baru
-
-        // Simpan ke database
-        $penilaianModel->save([
-            'pendaftaran_id' => $pendaftaran_id,
-            'rating' => $rating,
-            'komentar' => $komentar,
-            'foto' => json_encode($existingPhotos), // Foto disimpan sebagai JSON
-            'video' => $videoPath,
-        ]);
-
-        return redirect()->to('/pendaftaran/nilai-list')->with('success', 'Penilaian berhasil dikirim.');
+    // Validasi wajib isi
+    if (!$rating || !$komentar) {
+        return redirect()->back()->with('error', 'Rating dan komentar wajib diisi.');
     }
+
+    // Proses upload foto
+    $fotoFiles = $this->request->getFileMultiple('foto');
+    $fotoPaths = [];
+
+    if (empty($fotoFiles)) {
+        return redirect()->back()->with('error', 'Minimal 1 foto wajib diunggah.');
+    }
+
+    foreach ($fotoFiles as $file) {
+        if ($file->isValid() && !$file->hasMoved()) {
+            $newName = $file->getRandomName();
+            $file->move('uploads/foto/', $newName);
+            $fotoPaths[] = 'uploads/foto/' . $newName;
+        }
+    }
+
+    // Proses upload video
+    $videoFile = $this->request->getFile('video');
+    if (!$videoFile || !$videoFile->isValid()) {
+        return redirect()->back()->with('error', 'Video wajib diunggah.');
+    }
+
+    $videoPath = null;
+    if ($videoFile->isValid() && !$videoFile->hasMoved()) {
+        $newName = $videoFile->getRandomName();
+        $videoFile->move('uploads/video/', $newName);
+        $videoPath = 'uploads/video/' . $newName;
+    }
+
+    // Ambil foto yang ada dari database jika ada
+    $existingPhotos = [];
+    $existingPenilaian = $penilaianModel->find($pendaftaran_id); // Ambil penilaian yang ada berdasarkan ID
+    if ($existingPenilaian && !empty($existingPenilaian['foto'])) {
+        $existingPhotos = json_decode($existingPenilaian['foto'], true) ?? [];
+    }
+
+    // Tambahkan foto baru ke dalam array
+    $existingPhotos = array_merge($existingPhotos, $fotoPaths); // Menggabungkan foto yang ada dengan foto baru
+
+    // Simpan ke database
+    $penilaianModel->save([
+        'pendaftaran_id' => $pendaftaran_id,
+        'rating' => $rating,
+        'komentar' => $komentar,
+        'foto' => json_encode($existingPhotos), // Foto disimpan sebagai JSON
+        'video' => $videoPath,
+    ]);
+
+    return redirect()->to('/pendaftaran/nilai-list')->with('success', 'Penilaian berhasil dikirim.');
+}
     //Riwayat Penilaian
     public function nilaiList()
     {

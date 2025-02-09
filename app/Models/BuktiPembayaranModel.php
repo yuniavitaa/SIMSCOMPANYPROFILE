@@ -22,17 +22,17 @@ class BuktiPembayaranModel extends Model
         'package_price',
     ];
 
-   public function getRiwayatByEmail($email, $status = null)
-{
-    $builder = $this->db->table($this->table);
-    $builder->where('email', $email);
+    public function getRiwayatByEmail($email, $status = null)
+    {
+        $builder = $this->db->table($this->table);
+        $builder->where('email', $email);
 
-    if ($status !== null) {
-        $builder->where('status', $status);
+        if ($status !== null) {
+            $builder->where('status', $status);
+        }
+
+        return $builder->get()->getResult();  // Menjalankan query dan mengembalikan hasilnya
     }
-
-    return $builder->get()->getResult();  // Menjalankan query dan mengembalikan hasilnya
-}
 
 
     protected $useTimestamps = false;  // Mengaktifkan pengisian otomatis untuk created_at dan updated_at
