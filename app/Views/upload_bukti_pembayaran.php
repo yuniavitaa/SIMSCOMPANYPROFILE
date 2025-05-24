@@ -111,6 +111,8 @@
             </div>
         <?php endif; ?>
 
+
+
         <form action="/pendaftaran-anggota/prosesUploadBukti" method="post" enctype="multipart/form-data">
             <input type="hidden" name="pendaftaran_id" value="<?= $dataPendaftaran['id'] ?>">
             <div class="form-group">
@@ -152,4 +154,7 @@
         </form>
     </div>
 </div>
+
+
+
 <?= $this->endSection() ?>

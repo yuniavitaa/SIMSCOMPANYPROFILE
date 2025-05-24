@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'website_sims',
+        'database' => 'sims',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

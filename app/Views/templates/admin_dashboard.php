@@ -68,8 +68,12 @@
                 <p>Riwayat Pembayaran</p>
               </a>
             </li>
-
-
+            <li class="nav-item">
+              <a href="<?= base_url('/pendaftaran/penilaian') ?>" class="nav-link">
+                <i class="nav-icon fas fa-file-invoice"></i>
+                <p>Rating</p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="<?= base_url('admin/contact-us') ?>" class="nav-link">
                 <i class="nav-icon fas fa-envelope"></i>

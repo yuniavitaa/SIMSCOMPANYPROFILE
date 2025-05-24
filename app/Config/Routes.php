@@ -172,6 +172,11 @@ $routes->post('pendaftaran/prosesNilai', 'PendaftaranAnggota::prosesNilai');
 $routes->get('nilai-list', 'PendaftaranAnggota::nilaiList');
 
 
+// 📌 Route untuk Penilaian (AdminLTE)
+$routes->get('/pendaftaran/penilaian', 'PendaftaranAnggota::listPenilaian');
+
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

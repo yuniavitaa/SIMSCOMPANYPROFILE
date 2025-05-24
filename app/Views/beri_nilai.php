@@ -235,6 +235,7 @@
             <div id="video-preview-container" class="preview-container">
                 <label class="upload-box">
                     <input type="file" id="video-input" name="video" accept="video/mp4, video/quicktime" hidden>
+
                     <i class="fas fa-video"></i>
                 </label>
             </div>
