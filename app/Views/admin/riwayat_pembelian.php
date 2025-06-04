@@ -9,7 +9,6 @@
 <div class="container">
     <h1 class="text-center">Riwayat Pembelian</h1>
 
-    <a href="<?= base_url('admin/create'); ?>" class="btn btn-primary mb-3">Tambah Riwayat</a>
 
     <table class="table table-bordered">
         <thead>
@@ -22,7 +21,6 @@
                 <th>Harga</th>
                 <th>Status</th>
                 <th>Tanggal</th>
-                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -45,9 +43,6 @@
                         </form>
                     </td>
                     <td><?= date('d-m-Y H:i', strtotime($row['created_at'])) ?></td>
-                    <td>
-                        <a href="<?= base_url('admin/detail/' . $row['id']) ?>" class="btn btn-primary btn-sm">Detail</a>
-                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

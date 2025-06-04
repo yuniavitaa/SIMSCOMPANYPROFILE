@@ -80,7 +80,7 @@ $routes->post('payment/Kecamatan', 'Payment::Kecamatan');
 $routes->post('payment/simpan', 'Payment::simpan');
 
 
-// Blog Routes
+// Blog Routes User 
 $routes->get('blog', 'BlogController::index'); // Menampilkan daftar blog
 $routes->get('blog/(:num)', 'BlogController::detail/$1'); // Menampilkan detail blog berdasarkan ID
 // Blog Admin

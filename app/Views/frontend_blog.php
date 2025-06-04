@@ -1,23 +1,17 @@
 <?= $this->extend('layout/frontend_template') ?>
 <?= $this->section('style') ?>
 <style>
-    /* .navbar {
-        background-color: transparent;
-        border-bottom: none;
-        transition: background-color 0.3s ease;
+  
+        .hero-section .carousel-item {
+        height: 500px; /* atau 70vh jika ingin responsif */
+        overflow: hidden;
     }
 
-    .navbar.navbar-dark .navbar-nav .nav-link {
-        color: white !important;
+    .hero-section .carousel-item img {
+        height: 100%;
+        object-fit: cover; /* bisa kembali pakai cover jika ingin penuh */
     }
 
-    .navbar.navbar-dark .navbar-toggler {
-        background-color: white !important;
-    }
-
-    .navbar.scrolled {
-        background-color: rgba(0, 0, 0, 0.8) !important;
-    } */
 
     .button-group .btn.active {
         background: linear-gradient(135deg, #ff416c, #4688f1);
@@ -168,7 +162,7 @@
                                     <p class="chakra-petch-bold"><?= date('d F Y', strtotime($blog['created_at'])); ?></p>
                                     <h1><?= esc($blog['title']); ?></h1>
                                     <p class="chakra-petch-bold"><?= esc($blog['content']); ?></p>
-                                    <a href="<?= base_url('frontend_blog_item' . $blog['id']); ?>" class="btn btn-outline-light btn-lg chakra-petch-medium" data-mdb-ripple-init>Selengkapnya</a>
+                                    <a href="<?= base_url('frontend_blog_item/' . $blog['id']); ?>" class="btn btn-outline-light btn-lg chakra-petch-medium" data-mdb-ripple-init>Selengkapnya</a>
                                 </div>
                             </div>
                         </div>

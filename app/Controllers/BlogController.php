@@ -18,14 +18,22 @@ class BlogController extends BaseController
         return view('frontend_blog', $data); // Ganti dengan file view yang ada
     }
 
-    public function detail($id)
+    public function detail($id = null)
     {
-        $data['blog'] = $this->blogModel->find($id);
-        if (!$data['blog']) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Blog tidak ditemukan');
+        if (!$id) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
-        return view('frontend_blog_item', $data); // Ganti dengan file view yang ada
+
+        $blog = $this->blogModel->find($id);
+        if (!$blog) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+
+        $data['blog'] = $blog;
+
+        return view('frontend_blog_item', $data);
     }
+
 
     public function insertData()
     {
@@ -33,7 +41,7 @@ class BlogController extends BaseController
             [
                 'title' => 'Judul Artikel 1',
                 'content' => 'Ini adalah isi dari artikel pertama.',
-                'image' => 'assets/img/Blog/Media.png',
+                'image' => 'assets/img/Blog/Media 3.png',
                 'category' => 'Teknologi',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
